@@ -1,0 +1,11 @@
+a. 7
+
+b. Tue Jan 24 22:28:11 2017 -0600
+
+c. git log shows the commit history of the repository while git status shows the current state of the working directory and tells you things like what has been staged, what hasn't been staged, and which files aren't being tracked by git.
+
+d. An unstaged file is in the git repository whose changes are recorded by git but not marked for commit. Untracked files on the other hand are not in the git repository. Changes made to untracked files are not recorded by git.
+
+e. Git checkout allows you to create branches and switch between them. Reset can't create new branches and while it can also switch the head pointer, it does this through deleting commits and altering the commit history which checkout does not do.
+
+f. An error would occur that would disallow your uncommited files from being overwritten. It would require you to stash or commit these changes before pull would work.
