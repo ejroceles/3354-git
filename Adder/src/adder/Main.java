@@ -12,10 +12,12 @@ public class Main {
     }
 
     private static int addArguments(String[] args) {
-        int sum;
-	for(int i = 0; i < args.length; i++) 
-	{
+        int sum = Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
+	if(args.length > 2){
+	  for(int i = 2; i < args.length; i++) 
+          {
 		sum += Integer.valueOf(args[i]);
+	  }
 	}
 	return sum;
     }
