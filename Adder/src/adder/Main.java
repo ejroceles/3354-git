@@ -6,9 +6,11 @@ public class Main {
         try {
             int result = addArguments(args);
             System.out.println(result);
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("Please provide at least two integers to add");
-        }
+        } catch (NumberFormatException e) {
+	    System.err.println("First argument must be a '-' or an integer, and all arguments to be added must be integers.");
+	}
     }
 
     private static int addArguments(String[] args) {
