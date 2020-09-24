@@ -14,12 +14,22 @@ public class Main {
     }
 
     private static int addArguments(String[] args) {
-        int sum = Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
-	if(args.length > 2){
-	  for(int i = 2; i < args.length; i++) 
-          {
-		sum += Integer.valueOf(args[i]);
-	  }
+	int sum;
+	int start;
+	if(args[0].equals("-")){
+        	sum = (Integer.valueOf(args[1]) + Integer.valueOf(args[2])) * -1;
+		start = 3;
+	}
+	else{
+		sum = Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
+		start = 2;
+	}
+	for(int i = start; i < args.length; i++) 
+	{
+		if(args[0].equals("-"))
+			sum += Integer.valueOf(args[i]) * -1;
+		else
+			sum += Integer.valueOf(args[i]);
 	}
 	return sum;
     }
